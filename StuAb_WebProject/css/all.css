@@ -1,0 +1,11 @@
+/* core bootstrap css */
+@import url("bootstrap/bootstrap.min.css");
+
+/* my custom css */
+/* @import url(custom/extra.css); */
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');

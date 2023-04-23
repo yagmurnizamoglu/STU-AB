@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yagmur Nizamoglu">
+    <meta name="description" content="Stu-ab project">
+    <meta name="keywords" content="study,abroad,erasmus,education">
+    <link href="img/logo.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Website Tutorial Form</title>
+
+    <!-- bootstrap all css url -->
+    <style>
+        @import url("css/all.css");
+    </style>
+    <link rel="stylesheet" href="css/custom/extra.css">
+
+
+</head>
+
+<body>
+    <!-- Navbar starts -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" style="width: 15rem;height:5rem"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admission.html">Admission</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tuition.html">Tuition and Fees</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="applyNow" style="display: none" href="form.html">Apply Now!</a>
+                    </li>
+
+
+                </ul>
+                <div class="text-end" id="header_sag">
+                    <div id="btn_div">
+                        <a href="signin.html"><button type="button" class="btn btn-outline-light me-2"
+                                style="background-color: rgb(230, 85, 55);text-decoration-color: antiquewhite;">Sign
+                                in</button></a>
+                        <a href="signup.html"><button type="button" class="btn btn-warning">Sign up</button></a>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button id="logout_Btn" type="button" class="btn btn-danger" style="display:none"
+                        onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navbar ends -->
+    <div class="row justify-content-center">
+        <div class="col-4">
+
+            <form>
+                <i class="fa-solid fa-pen-nib fa-4x"></i>
+                <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+
+                <div class="form-floating py-2">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating py-2">
+                    <input type="password" class="form-control" id="sifre" placeholder="Şifrenizi Giriniz">
+                    <label for="floatingPassword">Password</label>
+                </div>
+
+                <p id="sonuc"></p>
+                <button type="button" class="w-100 btn btn-lg btn-primary" onclick="girisKontrol()">Login</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Footer starts -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 STU-AB, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="https://twitter.com/yagmurnizamoglu"><svg class="bi"
+                            width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/yagmurnizamoglu/"><svg class="bi"
+                            width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://tr-tr.facebook.com/"><svg class="bi" width="24"
+                            height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Footer end -->
+
+
+
+
+
+
+</body>
+
+
+<!-- js link -->
+
+<script src="js\bootstrap\bootstrap.bundle.min.js"></script>
+<script src="./js/custom/extra.js"></script>
+<script>
+    checkLogin();
+
+</script>
+
+</body>
+
+</html>

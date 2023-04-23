@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yagmur Nizamoglu">
+  <meta name="description" content="Stu-ab project">
+  <meta name="keywords" content="study,abroad,erasmus,education">
+  <link href="img/logo.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Website Tutorial Form</title>
+
+
+  <!-- bootstrap all css url -->
+  <style>
+    @import url("css/all.css");
+  </style>
+  <link rel="stylesheet" href="css/custom/extra.css">
+
+</head>
+
+<body>
+  <!-- Navbar starts -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" style="width: 15rem;height:5rem"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="admission.html">Admission</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="tuition.html">Tuition and Fees</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="applyNow" style="display: none" href="form.html">Apply Now!</a>
+          </li>
+
+
+        </ul>
+        <div class="text-end" id="header_sag">
+          <div id="btn_div">
+            <a href="signin.html"><button type="button" class="btn btn-outline-light me-2"
+                style="background-color: rgb(230, 85, 55);text-decoration-color: antiquewhite;">Sign in</button></a>
+            <a href="signup.html"><button type="button" class="btn btn-warning">Sign up</button></a>
+          </div>
+        </div>
+        <div class="text-end">
+          <button id="logout_Btn" type="button" class="btn btn-danger" style="display:none"
+            onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Navbar ends -->
+
+  <div class="row">
+
+
+    <div class="col-6" style="background-color: rgb(230, 85, 55);height:150px">
+      <h1 class="mx-5 my-5" style="font-family: sans-serif;font-stretch:expanded">Tuition and Fees</h1>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+
+    <div class="col-2">
+
+    </div>
+
+    <div class="col-5">
+      <form>
+        <p>Please select the city where you plan to study</p>
+        <select class="form-select" id="selectedCity" aria-label="Default select example">
+          <option selected>Cities</option>
+          <option value="0">Istanbul</option>
+          <option value="1">Izmir</option>
+          <option value="2">Antalya</option>
+          <option value="3">Munich</option>
+          <option value="4">Berlin</option>
+          <option value="5">Hamburg</option>
+          <option value="6">Dresden</option>
+          <option value="7">Frankfurt</option>
+          <option value="8">Aachen</option>
+          <option value="9">Rome</option>
+          <option value="10">Milan</option>
+          <option value="11">Florance</option>
+        </select>
+
+
+        <p>How do you plan to go to university?</p>
+        <div class="my-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="byCar" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+              By a car
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="public" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Public Transportation
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="bike" value="option3">
+            <label class="form-check-label" for="exampleRadios2">
+              Walking or by bike
+            </label>
+          </div>
+
+        </div>
+
+        <p> How do you like to have fun?</p>
+        <div class="my-3">
+          <div class="form-check-fun">
+            <input class="form-check-input" type="radio" name="exampleRadios01" id="park" value="park">
+            <label class="form-check-label01" for="park">
+              I prefer outdoor activities like walking in parks and going to the beach.
+            </label>
+          </div>
+          <div class="form-check-fun">
+            <input class="form-check-input" type="radio" name="exampleRadios01" id="home" value="home">
+            <label class="form-check-label01" for="home">
+              I like watching movies at home and reading books.
+            </label>
+          </div>
+          <div class="form-check-fun">
+            <input class="form-check-input" type="radio" name="exampleRadios01" id="party" value="party">
+            <label class="form-check-label01" for="party">
+              I want to explore new restaurants and go to parties!
+            </label>
+          </div>
+          
+          <br>
+          <button type="button" onclick="calcLiv()">calculate cost of living</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <b><p id="costofliving"></p></b>
+    <b><p style="color: rgb(230, 85, 55)" id="total"></p></b>
+
+  </div>
+
+
+  <div class="col-1">
+
+  </div>
+
+  </div>
+
+  <!-- Footer starts -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">© 2023 STU-AB, Inc</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://twitter.com/yagmurnizamoglu"><svg class="bi" width="24"
+              height="24">
+              <use xlink:href="#twitter"></use>
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/yagmurnizamoglu/"><svg class="bi"
+              width="24" height="24">
+              <use xlink:href="#instagram"></use>
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://tr-tr.facebook.com/"><svg class="bi" width="24"
+              height="24">
+              <use xlink:href="#facebook"></use>
+            </svg></a></li>
+      </ul>
+    </footer>
+  </div>
+  <!-- Footer end -->
+
+  <!-- js link -->
+
+  <script src="js\bootstrap\bootstrap.bundle.min.js"></script>
+  <script src="./js/custom/extra.js"></script>
+
+  <script>
+
+    checkLogin();
+
+  </script>
+
+</body>
+
+</html>

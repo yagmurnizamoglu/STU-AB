@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yagmur Nizamoglu">
+    <meta name="description" content="Stu-ab project">
+    <meta name="keywords" content="study,abroad,erasmus,education">
+    <link href="img/logo.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Website Tutorial Index</title>
+
+    <!-- bootstrap all css url -->
+    <style>
+        @import url("css/all.css");
+    </style>
+    <link rel="stylesheet" href="css/custom/extra.css">
+
+
+
+
+</head>
+
+<body>
+    <!-- Navbar starts -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" style="width: 15rem;height:5rem"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admission.html">Admission</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tuition.html">Tuition and Fees</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="applyNow" style="display: none" href="form.html">Apply Now!</a>
+                    </li>
+
+
+                </ul>
+ 
+                <div class="text-end" id="header_sag">
+                    <div id="btn_div">
+                        <a href="signin.html"><button type="button" class="btn btn-outline-light me-2" style="background-color: rgb(230, 85, 55);text-decoration-color: antiquewhite;">Sign in</button></a>
+                        <a href="signup.html"><button type="button" class="btn btn-warning">Sign up</button></a>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button id="logout_Btn" type="button" class="btn btn-danger" style="display:none" onclick="logout()">Logout</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navbar ends -->
+
+
+    <!-- Main starts -->
+    <div class="row">
+
+
+        <div class="col-6" style="background-color: rgb(230, 85, 55);height:150px">
+            <h1 class="mx-5 my-5" style="font-family: sans-serif;font-stretch:expanded">About</h1>
+        </div>
+    </div>
+
+    <section id="services" class="mySection">
+        <div class="container mt-5">
+
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-center m-auto"
+                        style="width: 10rem;height:10rem;">
+                        <i class="bi bi-cart" style="font-size: 4.5rem;"><img src="img/world.png" class="imguni"
+                                style="width: 12rem;height:12rem;"></i>
+                    </div>
+                    <h4 class="counter" id="count_country">0</h4>
+                    <h4 class="my-3 fw-bold">Countries</h4>
+                    <p class="text-muted">Our program offers a unique opportunity to study abroad in 10 different countries, each with its own distinct culture and educational system. From the bustling cities of Germany to the serene countryside of Greece, students will have the chance to broaden their horizons and gain a global perspective. With our expert guidance, you'll navigate the application process and experience the adventure of a lifetime.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-center m-auto"
+                        style="width: 10rem;height:10rem;">
+                        <i class="bi bi-laptop" style="font-size: 4.5rem;"><img src="img/city.png" class="imguni"
+                                style="width: 10rem;height:10rem;"></i>
+                    </div>
+
+                    <h4 class="counter1" id="count_city">0</h4>
+                    <h4 class="my-3 fw-bold">Cities</h4>
+                    <p class="text-muted">Immerse yourself in the vibrant energy of 15 different cities around the world through our study abroad program. From the historic streets of Prague and Rome to the modern metropolis of Frankfurt and Munich, you'll get a taste of local culture while studying at top-ranked universities. Whether you're interested in exploring museums, trying new foods, or simply strolling through scenic parks, each city offers a unique and enriching experience.
+                    </p>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-center m-auto"
+                        style="width: 10rem;height:10rem;" aria-hidden="true">
+                        <i class="bi bi-shield-lock" style="font-size: 4.5rem;"><img src="img/uni.png" class="imguni"
+                                style="width: 10rem;height:10rem;"></i>
+                    </div>
+                    <h4 class="counter2" id="count_uni">0</h4>
+                    <h4 class="my-3 fw-bold">Universities</h4>
+                    <p class="text-muted">Take your education to the next level by studying at one of our 25 partner universities around the world. Our program offers a range of academic disciplines, from business and engineering to the humanities and social sciences. With small class sizes and dedicated faculty, you'll receive personalized attention and gain valuable skills for your future career. Additionally, you'll have the opportunity to network with other international students and make lifelong connections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main ends -->
+
+
+
+
+    <!-- Footer starts -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 STU-AB, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="https://twitter.com/yagmurnizamoglu"><svg class="bi"
+                            width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/yagmurnizamoglu/"><svg class="bi"
+                            width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://tr-tr.facebook.com/"><svg class="bi" width="24"
+                            height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Footer end -->
+
+
+
+    <!-- js link -->
+
+    <script src="js\bootstrap\bootstrap.bundle.min.js"></script>
+    <script src="./js/custom/extra.js"></script>
+    <script>
+
+        checkLogin();
+
+    </script>
+
+</body>
+
+</html>
